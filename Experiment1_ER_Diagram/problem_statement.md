@@ -46,27 +46,53 @@ Design a database for patient management, appointments, medical records, and bil
    - How you modeled prerequisites or billing.
 
 # ER Diagram Submission - Student Name
+```
+S.PREM KUMAR
+212223240125
+
+```
 
 ## Scenario Chosen:
-University / Hospital (choose one)
+UNIVERSITY DATABASE
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
+![ER Diagram](![Screenshot 2025-04-28 135512](https://github.com/user-attachments/assets/6951b05f-ec7a-4cd7-a3ad-d4d78a693745)
+)
 
 ## Entities and Attributes:
-- Entity1: Attributes
-- Entity2: Attributes
-...
+```
+department-id,name
+faculty-name,id,emai,phone no
+course-credit,id,name,program id
+entrollment-id,enrollmentdate,studentid,courseid
+student-phone no,email,date of birth,programid,id,name
+pre request-course id ,prereq course id
+program-id,name,dept id
 
+```
 ## Relationships and Constraints:
-- Relationship1 (Cardinality, Participation)
-- Relationship2 (Cardinality, Participation)
-...
+```
+department-program(one-to-many)
+program-course(one-to-many)
+program-student(one-to-many)
+course-enrollment(one-to-many)
+student-enrollment(one-to-many)
+instructor-course(one-to-many)
+course-prerequisite(one-to-many)
 
+```
 ## Extension (Prerequisite / Billing):
-- Explain how you modeled prerequisites or billing.
-
+prerequisite- student have must to be id,date of birth.
 ## Design Choices:
-Brief explanation of why you chose certain entities, relationships, and assumptions
+Students are billed per semester, typically based on the number of credit hours.
 
-## RESULT
+A course can have multiple prerequisites, and a prerequisite can apply to multiple courses.
+
+Payments can be made in installments, so billing and payment are separated for flexibility.
+
+Each course belongs to one department, simplifying academic administration.
+
+Prerequisite enforcement is logical (not procedural)—ensured via validation in software, not the database alone
+
+## RESULT:
+The university database was created sucessfully.
