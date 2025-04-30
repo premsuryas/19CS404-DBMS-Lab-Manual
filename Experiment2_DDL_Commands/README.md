@@ -104,124 +104,154 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+---
+![Question1](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL1q.png)
 
 ```sql
--- Paste your SQL code below for Question 1
+create table Members(MemberID INTEGER, MemberName TEXT, JoinDate DATE);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![Output1](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_1.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![Question2](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl2.png)
 
 ```sql
--- Paste your SQL code below for Question 2
+CREATE TABLE Invoices 
+(InvoiceID INTEGER UNIQUE,
+InvoiceDate DATE,
+DueDate DATE CHECK(DueDate>InvoiceDate),
+Amount REAL CHECK(Amount>0)
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![Output2](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_2.png)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![Question3](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl3.png)
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Invoices 
+(InvoiceID INTEGER UNIQUE,
+InvoiceDate DATE,
+DueDate DATE CHECK(DueDate>InvoiceDate),
+Amount REAL CHECK(Amount>0)
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![Output3](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_3.png)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![Question4](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl4.png)
 
 ```sql
--- Paste your SQL code below for Question 4
+ALTER TABLE Companies RENAME name TO first_name;
+ALTER TABLE Companies ADD COLUMN mobilenumber number;
+ALTER TABLE Companies ADD COLUMN DOB Date;
+ALTER TABLE Companies ADD COLUMN State varchar(30);
 ```
 
 **Output:**
 
-![Output4](output.png)
+![Output4](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_4.png)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![Question5](https://github.com/Madhavan-1510/Files_RM/blob/main/dd5.png)
 
 ```sql
--- Paste your SQL code below for Question 5
+insert into Products (ProductID,ProductName,Price,Stock) select ProductID,ProductName,Price,Stock from Discontinued_products;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![Output5](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_5.png)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![Question6](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl6.png)
 
 ```sql
--- Paste your SQL code below for Question 6
+ALTER TABLE Companies ADD COLUMN designation varchar(50);
+ALTER TABLE Companies ADD COLUMN net_salary number;
+ALTER TABLE Companies ADD COLUMN dob date;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![Output6](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_6.png)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Question7](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl7.png)
 
 ```sql
--- Paste your SQL code below for Question 7
+CREATE TABLE Shipments
+(ShipmentID INTEGER PRIMARY KEY,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+FOREIGN KEY(SupplierID) REFERENCES Suppliers,
+FOREIGN KEY(OrderID) REFERENCES Orders
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![Output7](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_7.png)
 
 **Question 8**
 ---
--- Paste Question 8 here
+![Question8](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl8.png)
 
 ```sql
--- Paste your SQL code below for Question 8
+CREATE TABLE jobs 
+(job_id INTEGER,
+job_title VARCHAR(30) DEFAULT "",
+min_salary NUMBER DEFAULT '8000',
+max_salary NUMBER DEFAULT NULL
+);
 ```
 
 **Output:**
 
-![Output8](output.png)
+![Output8](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_8.png)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![Question9](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl9.png)
 
 ```sql
--- Paste your SQL code below for Question 9
+INSERT INTO Customers(CustomerID,Name,Address,City,ZipCode) VALUES (306,"Diana Prince","Themyscira",NULL,NULL);
+INSERT INTO Customers(CustomerID,Name,Address,City,ZipCode) VALUES (307,"Bruce Wayne","Wayne Manor","Gotham",10007);
+INSERT INTO Customers(CustomerID,Name,Address,City,ZipCode) VALUES (308,"Peter Parker","Queens",NULL,11375);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![Output9](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_9.png)
 
 **Question 10**
 ---
--- Paste Question 10 here
+![Question10](https://github.com/Madhavan-1510/Files_RM/blob/main/ddl10.png)
 
 ```sql
--- Paste your SQL code below for Question 10
+INSERT INTO Customers(CustomerID,Name,Address,City,ZipCode) VALUES (301,"Michael Jordan","123 Maple St","Chicago",60616);
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Output10](https://github.com/Madhavan-1510/Files_RM/blob/main/DDL_10.png)
 
 
 ## RESULT
